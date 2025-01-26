@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mult Testing</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.12/marked.min.js"></script> <!-- Marked.js -->
+  <script src="https://unpkg.com/marked@4.0.12/lib/marked.min.js"></script>
+
 </head>
 <body>
 
