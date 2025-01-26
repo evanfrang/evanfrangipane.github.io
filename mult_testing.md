@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mult Testing</title>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.12/marked.min.js"></script> <!-- Make sure Marked.js is loaded first -->
 </head>
 <body>
 
   <div id="markdown-container">Loading content...</div>
 
   <script>
-    const url = 'https://cdn.jsdelivr.net/gh/evanfrang/mult_testing/README.md'; // The jsDelivr URL
+    const url = 'https://raw.githubusercontent.com/evanfrang/mult_testing/main/mult_testing.md'; // Raw GitHub URL
 
     fetch(url)
       .then(response => {
