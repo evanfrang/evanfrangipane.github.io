@@ -58,6 +58,10 @@ rcParams['xtick.labelsize'] = 12
 rcParams['ytick.labelsize'] = 12  
 plt.style.use('bmh')
 
+# If you want to see how the simulation was performed 
+# please check out the github repo
+# https://github.com/evanfrang/evanfrangipane.github.io/blob/gh-pages/mult_testing/mult_test.ipynb
+
 with open('fwer.pkl', 'rb') as f:
     fwer_1, fwer_2, fwer_3, M_list, fwer_b1, fwer_b2, fwer_b3, \
     fwer_N, fwer_bound, fwer_bound_N, fwer_bound_b, Ms, \
