@@ -29,7 +29,7 @@ echo "Quarto rendering completed successfully."
 
 # Step 2: Run the Python script
 echo "Running Python script: $PYTHON_SCRIPT..."
-python3 "$PYTHON_SCRIPT"  # Use `python` if Python 3 is your default
+python "$PYTHON_SCRIPT"  # Use `python` if Python 3 is your default
 
 # Check if Python script execution was successful
 if [ $? -ne 0 ]; then

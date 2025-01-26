@@ -1,7 +1,7 @@
 import re
 
 # Input Markdown file
-with open("README.md", "r") as file:
+with open("README.md", "r", encoding="utf-8") as file:
     content = file.read()
 
 # Regex pattern for code blocks
@@ -16,5 +16,5 @@ wrapped_content = re.sub(
 )
 
 # Output to a new Markdown file
-with open("README.md", "w") as file:
+with open("README.md", "w", encoding="utf-8") as file:
     file.write(wrapped_content)
