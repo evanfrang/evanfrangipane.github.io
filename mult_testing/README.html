@@ -166,7 +166,7 @@ window.Quarto = {
 <li><span class="math inline">NN = 10000</span> - number of repetitions of each analysis</li>
 </ul>
 <p>So, the total number of coins flipped in each analysis is <span class="math inline">M \cdot N \cdot NN</span>. We choose <span class="math inline">M = \{18, 51, 120\}</span>, and <span class="math inline">N \in [1, 1000]</span> for the following plots.</p>
-<div id="10b7d2e9" class="cell" data-execution_count="2">
+<div id="6b32ba5d" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -197,10 +197,10 @@ window.Quarto = {
 </details>
 </div>
 <p>We plot the results of our analyses in <a href="#fig-fwer" class="quarto-xref">Figure&nbsp;1</a>. The false positive rate (FWER) increases toward <span class="math inline">1</span> with <span class="math inline">N</span>. The three choices of <span class="math inline">M</span> are plotted along with the analytical curve. There is a discrepancy between the analytical curve and the numerical simulations that is smallest for <span class="math inline">M = 51</span>. We will return to this in the next section. The relevant feature is the monotonic increase in Type I Error.</p>
-<div id="cell-fig-fwer" class="cell" data-execution_count="3">
+<div id="cell-fig-fwer" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>ax.plot(fwer_bound_N, fwer_bound, label<span class="op">=</span><span class="vs">r'$1 - (1 - \alpha)^N$'</span>, color<span class="op">=</span><span class="st">'navy'</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>ax.plot(fwer_N, fwer_1, <span class="st">'o'</span>,label<span class="op">=</span><span class="ss">f'M=</span><span class="sc">{</span>M_list[<span class="dv">0</span>]<span class="sc">}</span><span class="ss">'</span>, <span class="op">\</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">'darkred'</span>, markersize<span class="op">=</span><span class="dv">6</span>, alpha<span class="op">=</span><span class="fl">0.9</span>)</span>
@@ -227,7 +227,7 @@ window.Quarto = {
 <div id="fig-fwer" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fwer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="README_files/figure-html/fig-fwer-output-1.png" width="939" height="555" class="figure-img">
+<img src="README_files/figure-html/fig-fwer-output-1.png" width="747" height="555" class="figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fwer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Uncorrected FWER
@@ -240,12 +240,12 @@ Figure&nbsp;1: Uncorrected FWER
 <section id="discrepancy-in-fwer" class="level2">
 <h2 class="anchored" data-anchor-id="discrepancy-in-fwer">Discrepancy in FWER</h2>
 <p>Our <span class="math inline">\alpha</span> significance was chosen to be <span class="math inline">0.05</span> for this analysis. However, when we are dealing with coin flips we are using discrete data and not continuous. This has consequences for what constitutes a significant result for flipping <span class="math inline">M</span> coins. For a significant result we need the p-value of the number of heads (or tails hence two-tail test) to be the largest number less than <span class="math inline">\alpha = 0.05</span>. We call this number of heads the critical number of heads. However, due to discrete data, the critical p-value can vary greatly rather than being exactly <span class="math inline">0.05</span>. One would expect that as the number of coin flips increases, the critical p-value should approach <span class="math inline">0.05</span>. The intuition being as we increase the number of coins flipped we are filling in the discrete data set and approaching continuum. We plot the critical p-value for increasing <span class="math inline">M</span> coin flips in <a href="#fig-crit" class="quarto-xref">Figure&nbsp;2</a>. Additionally, we also plot the three <span class="math inline">M</span> values from the previous simulation and they show the same hierarchy as seen in <a href="#fig-fwer" class="quarto-xref">Figure&nbsp;1</a>. The closer the critical p-value is to <span class="math inline">0.05</span>, the closer the FWER is to <span class="math inline">1 - (1 - \alpha)^N</span>.</p>
-<div id="cell-fig-crit" class="cell" data-execution_count="4">
+<div id="cell-fig-crit" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> [<span class="st">'red'</span>, <span class="st">'green'</span>, <span class="st">'cyan'</span>]</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>labels <span class="op">=</span> [<span class="ss">f'M=</span><span class="sc">{</span>M_list[<span class="dv">0</span>]<span class="sc">}</span><span class="ss">'</span>, <span class="ss">f'M=</span><span class="sc">{</span>M_list[<span class="dv">1</span>]<span class="sc">}</span><span class="ss">'</span>, <span class="ss">f'M=</span><span class="sc">{</span>M_list[<span class="dv">2</span>]<span class="sc">}</span><span class="ss">'</span>]</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>ax.plot(Ms, pvs, color<span class="op">=</span><span class="st">'navy'</span>, label<span class="op">=</span><span class="st">'Critical p-Value'</span>, alpha<span class="op">=</span><span class="fl">0.8</span>)</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>ax.axhline(<span class="fl">0.05</span>, color<span class="op">=</span><span class="st">'black'</span>, label<span class="op">=</span><span class="ss">f'$</span><span class="ch">\\</span><span class="ss">alpha = 0.05$'</span>)</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>plt.plot([Ms[index[<span class="dv">0</span>]]], [pvs[index[<span class="dv">0</span>]]], <span class="st">'o'</span>, label<span class="op">=</span>labels[<span class="dv">0</span>], <span class="op">\</span></span>
@@ -271,7 +271,7 @@ Figure&nbsp;1: Uncorrected FWER
 <div id="fig-crit" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-crit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="README_files/figure-html/fig-crit-output-1.png" width="939" height="555" class="figure-img">
+<img src="README_files/figure-html/fig-crit-output-1.png" width="747" height="555" class="figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-crit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: Critical p-value
@@ -288,10 +288,10 @@ Figure&nbsp;2: Critical p-value
 1 - (1 - \alpha)^N \rightarrow 1 - (1 - N\cdot\alpha + \mathcal{O}(\alpha^2)) = N\cdot\alpha + \mathcal{O}(\alpha^2)
 </span></p>
 <p>Given this expansion, a natural redefinition of <span class="math inline">\alpha</span> is <span class="math inline">\alpha = \alpha / N</span> such that the first term in the expansion is our new <span class="math inline">\alpha = 0.05</span>. This redefinition bounds the FWER to <span class="math inline">0.05</span> rather than asymptoting to <span class="math inline">1</span>. Now the entire analysis has a significance of <span class="math inline">0.05</span>, while each individual test has a smaller significance scaled by the number of tests. Now, we redo the analysis with our new significance to confirm that FWER is around or less than <span class="math inline">0.05</span>. This can be seen in <a href="#fig-fwer-bon" class="quarto-xref">Figure&nbsp;3</a>. Notice that there is no clear hierarchy between the three choices of <span class="math inline">M</span>, this can be explained by <a href="#fig-crit" class="quarto-xref">Figure&nbsp;2</a> again, where this time because <span class="math inline">\alpha</span> depends on <span class="math inline">N</span>, the critical p-values will vary with <span class="math inline">N</span> and thus the hierarchy will vary.</p>
-<div id="cell-fig-fwer-bon" class="cell" data-execution_count="5">
+<div id="cell-fig-fwer-bon" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>ax.plot(fwer_bound_N, fwer_bound_b, label<span class="op">=</span><span class="vs">r'$1 - (1 - \alpha/N)^N$'</span>, <span class="op">\</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">'navy'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
@@ -320,7 +320,7 @@ Figure&nbsp;2: Critical p-value
 <div id="fig-fwer-bon" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fwer-bon-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="README_files/figure-html/fig-fwer-bon-output-1.png" width="939" height="555" class="figure-img">
+<img src="README_files/figure-html/fig-fwer-bon-output-1.png" width="747" height="555" class="figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fwer-bon-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;3: Bonferroni Corrected FWER
