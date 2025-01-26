@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Multiple Testing
+title: test
 ---
 
 {% include_relative mult_testing/README.md %}
