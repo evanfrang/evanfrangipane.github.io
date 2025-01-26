@@ -1,11 +1,6 @@
-.page-content {
-    max-width: 90%; /* Set to 90% of the viewport width */
-    margin: 0 auto; /* Center content horizontally */
-    padding: 1rem; /* Add some padding around the content */
-}
-
-article {
-    max-width: 90%;
+.full-width {
+    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
+    padding: 0;
 }
-
