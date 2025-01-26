@@ -35,34 +35,6 @@ So, the total number of coins flipped in each analysis is
 *M* ⋅ *N* ⋅ *n*. We choose *M* = {18, 51, 120}, and *N* ∈ \[1, 1000\]
 for the following plots.
 
-``` python
-import numpy as np
-import matplotlib.pyplot as plt
-import random
-from scipy.stats import binom
-from matplotlib import rcParams
-import pickle
-
-plt.rc('text', usetex=True)
-plt.rc('axes', linewidth=2)
-rcParams['font.family'] = 'serif'
-plt.rc('font', weight='bold')
-plt.rcParams['text.latex.preamble'] = r'\usepackage{sfmath} \boldmath'
-#rcParams['font.serif'] = ['Times New Roman']  
-rcParams['font.size'] = 14 
-rcParams['axes.titlesize'] = 16  
-rcParams['axes.labelsize'] = 14  
-rcParams['legend.fontsize'] = 12  
-rcParams['xtick.labelsize'] = 12  
-rcParams['ytick.labelsize'] = 12  
-plt.style.use('bmh')
-
-with open('fwer.pkl', 'rb') as f:
-    fwer_1, fwer_2, fwer_3, M_list, fwer_b1, fwer_b2, fwer_b3, \
-    fwer_N, fwer_bound, fwer_bound_N, fwer_bound_b, Ms, \
-    pvs, index = pickle.load(f)
-```
-
 We plot the results of our analyses in
 <a href="#fig-fwer" class="quarto-xref">Figure 1</a>. The false positive
 rate (FWER) increases toward 1 with *N*. The three choices of *M* are
@@ -70,31 +42,6 @@ plotted along with the analytical curve. There is a discrepancy between
 the analytical curve and the numerical simulations that is smallest for
 *M* = 51. We will return to this in the next section. The relevant
 feature is the monotonic increase in Type I Error.
-
-``` python
-fig, ax = plt.subplots(figsize=(10, 6))
-ax.plot(fwer_bound_N, fwer_bound, label=r'$1 - (1 - \alpha)^N$', color='navy')
-ax.plot(fwer_N, fwer_1, 'o',label=f'M={M_list[0]}', \
-    color='darkred', markersize=6, alpha=0.9)
-ax.plot(fwer_N, fwer_2, '^',label=f'M={M_list[1]}', \
-    color='darkgreen', markersize=6, alpha=0.9)
-ax.plot(fwer_N, fwer_3, 's',label=f'M={M_list[2]}', \
-    color='teal', markersize=6, alpha=0.9)
-
-ax.set_xlabel('Number of Tests (N)')
-ax.set_ylabel('FWER')
-ax.set_xscale('log')
-
-ax.legend(loc='lower right', frameon=True, shadow=True, borderpad=1)
-ax.grid(which='both', linestyle='-', linewidth=0.8, color='gray', alpha=0.7)
-#plt.title('Family-Wise Error Rate vs. Number of Tests')
-for spine in ax.spines.values():
-    spine.set_edgecolor('black')
-    spine.set_linewidth(1.5)
-
-plt.tight_layout()
-plt.show()
-```
 
 ![](README_files/figure-commonmark/fig-fwer-output-1.png)
 
@@ -119,32 +66,6 @@ show the same hierarchy as seen in
 critical p-value is to 0.05, the closer the FWER is to
 1 − (1 − *α*)<sup>*N*</sup>.
 
-``` python
-colors = ['red', 'green', 'cyan']
-labels = [f'M={M_list[0]}', f'M={M_list[1]}', f'M={M_list[2]}']
-fig, ax = plt.subplots(figsize=(10, 6))
-ax.plot(Ms, pvs, color='navy', label='Critical p-Value', alpha=0.8)
-ax.axhline(0.05, color='black', label=f'$\\alpha = 0.05$')
-plt.plot([Ms[index[0]]], [pvs[index[0]]], 'o', label=labels[0], \
-    color='darkred', markersize=8, zorder=2)
-plt.plot([Ms[index[1]]], [pvs[index[1]]], '^', label=labels[1], \
-    color='darkgreen', markersize=8, zorder=2)
-plt.plot([Ms[index[2]]], [pvs[index[2]]], 's', label=labels[2], \
-    color='teal', markersize=8, zorder=2)
-ax.set_xscale('log')
-ax.set_xlabel('Number of Coin Flips (M)')
-ax.set_ylabel('p-value')
-#plt.title('p-value of Critical Integer $(p_{\\text{crit}}< \\alpha)$')
-ax.legend(loc='lower right', frameon=True, shadow=True, borderpad=1)
-ax.grid(which='both', linestyle='-', linewidth=0.8, color='gray', alpha=0.7)
-for spine in ax.spines.values():
-    spine.set_edgecolor('black')
-    spine.set_linewidth(1.5)
-
-plt.tight_layout() 
-plt.show()
-```
-
 ![](README_files/figure-commonmark/fig-crit-output-1.png)
 
 ## Correcting Significance
@@ -168,32 +89,5 @@ there is no clear hierarchy between the three choices of *M*, this can
 be explained by <a href="#fig-crit" class="quarto-xref">Figure 2</a>
 again, where this time because *α* depends on *N*, the critical p-values
 will vary with *N* and thus the hierarchy will vary.
-
-``` python
-fig, ax = plt.subplots(figsize=(10, 6))
-
-ax.plot(fwer_bound_N, fwer_bound_b, label=r'$1 - (1 - \alpha/N)^N$', \
-    color='navy', linewidth=2)
-ax.plot(fwer_N, fwer_b1, 'o', label=f'M={M_list[0]} Bonferroni', \
-    color='darkred', markersize=6, alpha=0.9)
-ax.plot(fwer_N, fwer_b2, '^', label=f'M={M_list[1]} Bonferroni', \
-    color='darkgreen', markersize=6, alpha=0.9)
-ax.plot(fwer_N, fwer_b3, 's', label=f'M={M_list[2]} Bonferroni', \
-    color='teal', markersize=6, alpha=0.9)
-
-ax.set_xlabel('Number of Tests (N)')
-ax.set_ylabel('FWER')
-ax.set_xscale('log')
-
-ax.legend(loc='lower left', frameon=True, shadow=True, borderpad=1)
-ax.grid(which='both', linestyle='-', linewidth=0.8, color='gray', alpha=0.7)
-
-for spine in ax.spines.values():
-    spine.set_edgecolor('black')
-    spine.set_linewidth(1.5)
-
-plt.tight_layout()
-plt.show()
-```
 
 ![](README_files/figure-commonmark/fig-fwer-bon-output-1.png)

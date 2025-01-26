@@ -3,6 +3,7 @@ author: "Evan Frangipane"
 format:
   commonmark
 execute:
+  echo: false
   cache: true
 jupyter: python3
 ---
