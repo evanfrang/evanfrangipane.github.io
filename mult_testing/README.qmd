@@ -5,6 +5,7 @@ format:
   commonmark
 execute:
   cache: true
+  code-fold: true
 jupyter: python3
 ---
 
