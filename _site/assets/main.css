@@ -46,21 +46,21 @@ pre { padding: 8px 12px; overflow-x: auto; }
 pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 .wrapper {
-  max-width: -webkit-calc(1000px - (30px * 2)); /* Increase max-width */
-  max-width: calc(1000px - (30px * 2)); /* Increase max-width */
+  max-width: -webkit-calc(1000px - (3px * 2)); /* Increase max-width */
+  max-width: calc(1000px - (3px * 2)); /* Increase max-width */
   margin-right: auto;
   margin-left: auto;
-  padding-right: 30px;
-  padding-left: 30px;
+  padding-right: 3px;
+  padding-left: 3px;
 }
 
 /* For smaller screens, adjust as needed */
 @media screen and (max-width: 800px) {
   .wrapper {
-    max-width: -webkit-calc(1000px - (30px)); /* Wider for smaller screens */
-    max-width: calc(1000px - (30px));
-    padding-right: 15px;
-    padding-left: 15px;
+    max-width: -webkit-calc(1000px - (3px)); /* Wider for smaller screens */
+    max-width: calc(1000px - (3px));
+    padding-right: 2px;
+    padding-left: 2px;
   }
 }
 
