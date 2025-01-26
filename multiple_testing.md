@@ -1,5 +1,6 @@
 ---
 layout: page
-title: Multiple Testing Problem in Statistics
+title: Multiple Testing
 ---
-{% include /mult_testing/README.html %}
+
+<iframe src="/mult_testing/README.html" width="100%" height="600px" style="border:none;"></iframe>
