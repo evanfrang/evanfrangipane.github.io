@@ -1,4 +1,4 @@
-# Multiple Testing Problem in Statistics
+# Multiple Testing Problem
 Evan Frangipane
 
 - [Abstract](#abstract)
@@ -17,8 +17,8 @@ simple example, and outline a solution called the Bonferroni correction.
 
 The main idea of the multiple testing problem is the more statistical
 tests we perform during an analysis, the higher our false positive rate
-(Type I Error). Imagine we choose our confidence level to be 95%,
-essentially we are choosing our false positive rate to be 5% for one
+(Type I Error). Imagine we choose our confidence level to be $95\%$,
+essentially we are choosing our false positive rate to be $5\%$ for one
 test. If we test again, the probability of at least one false positive
 is $1 - (0.95 \cdot 0.95)$.
 
@@ -40,8 +40,8 @@ from the number of tails. Some parameters:
 - $NN = 10000$ - number of repetitions of each analysis
 
 So, the total number of coins flipped in each analysis is
-$M \cdot N \cdot NN$. We choose $M = 18, 51, 120$, and $N \in [1, 1000]$
-for the following plots.
+$M \cdot N \cdot NN$. We choose $M = \{18, 51, 120\}$, and
+$N \in [1, 1000]$ for the following plots.
 
 <details class="code-fold">
 <summary>Code</summary>

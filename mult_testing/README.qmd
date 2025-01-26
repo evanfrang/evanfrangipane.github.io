@@ -2,7 +2,7 @@
 title: "Multiple Testing Problem"
 author: "Evan Frangipane"
 format:
-  html:
+  gfm:
     code-fold: true
     toc: true
     toc-location: right
