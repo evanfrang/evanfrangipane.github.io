@@ -1,19 +1,15 @@
----
-layout: page
-title: Multiple Testing
-permalink: /mult_test/
----
-<div id="dynamic-markdown-content">Loading content...</div>
-
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script>
-  fetch('https://raw.githubusercontent.com/evanfrang/mult_testing/README.md')
-    .then(response => response.text())
+  fetch('https://cdn.jsdelivr.net/gh/evanfrang/mult_testing/README.md')
+    .then(response => {
+      if (!response.ok) throw new Error('Network response was not ok');
+      return response.text();
+    })
     .then(markdown => {
       document.getElementById('dynamic-markdown-content').innerHTML = marked(markdown);
     })
     .catch(error => {
       document.getElementById('dynamic-markdown-content').innerText = "Failed to load content.";
-      console.error(error);
+      console.error('There was a problem fetching the content:', error);
     });
 </script>
