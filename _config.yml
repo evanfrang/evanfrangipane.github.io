@@ -40,5 +40,4 @@ plugins:
 #
 exclude:
   - mult_testing/README.qmd
-  - mult_testing/README.md
 

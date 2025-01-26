@@ -1,12 +1,12 @@
 ---
-title: "Multiple Testing Problem"
+title: "Multiple Testing Problem in Statistics"
 author: "Evan Frangipane"
 format:
   html:
     code-fold: true
+    toc: true
+    toc-location: right
     html-math-method: katex
-    page-layout: full
-    css: style.css
 execute:
   cache: true
 jupyter: python3
@@ -76,7 +76,7 @@ We will return to this in the next section. The relevant feature is the monotoni
 #| label: fig-fwer
 #| fig-cap: "Uncorrected FWER"
 
-fig, ax = plt.subplots(figsize=(8, 6))
+fig, ax = plt.subplots(figsize=(10, 6))
 ax.plot(fwer_bound_N, fwer_bound, label=r'$1 - (1 - \alpha)^N$', color='navy')
 ax.plot(fwer_N, fwer_1, 'o',label=f'M={M_list[0]}', \
     color='darkred', markersize=6, alpha=0.9)
@@ -120,7 +120,7 @@ The closer the critical p-value is to $0.05$, the closer the FWER is to $1 - (1 
  
 colors = ['red', 'green', 'cyan']
 labels = [f'M={M_list[0]}', f'M={M_list[1]}', f'M={M_list[2]}']
-fig, ax = plt.subplots(figsize=(8, 6))
+fig, ax = plt.subplots(figsize=(10, 6))
 ax.plot(Ms, pvs, color='navy', label='Critical p-Value', alpha=0.8)
 ax.axhline(0.05, color='black', label=f'$\\alpha = 0.05$')
 plt.plot([Ms[index[0]]], [pvs[index[0]]], 'o', label=labels[0], \
@@ -164,7 +164,7 @@ Notice that there is no clear hierarchy between the three choices of $M$, this c
 #| label: fig-fwer-bon
 #| fig-cap: "Bonferroni Corrected FWER"
 
-fig, ax = plt.subplots(figsize=(8, 6))
+fig, ax = plt.subplots(figsize=(10, 6))
 
 ax.plot(fwer_bound_N, fwer_bound_b, label=r'$1 - (1 - \alpha/N)^N$', \
     color='navy', linewidth=2)

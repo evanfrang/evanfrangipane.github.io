@@ -6,3 +6,4 @@ vendor
 mult_testing/.jupyter_cache/
 mult_testing/.quarto/
 mult_testing/_site/
+_site/
