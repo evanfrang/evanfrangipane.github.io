@@ -30,10 +30,10 @@ from the number of tails. Some parameters:
 - *M* - number of coins being flipped in each test
 - *α* = 0.05 - significance for each test
 - *N* - number of tests performed
-- *N**N* = 10000 - number of repetitions of each analysis
+- *n* = 10000 - number of repetitions of each analysis
 
 So, the total number of coins flipped in each analysis is
-*M* ⋅ *N* ⋅ *N**N*. We choose *M* = {18, 51, 120}, and *N* ∈ \[1, 1000\]
+*M* ⋅ *N* ⋅ *n*. We choose *M* = {18, 51, 120}, and *N* ∈ \[1, 1000\]
 for the following plots.
 
 ``` python
