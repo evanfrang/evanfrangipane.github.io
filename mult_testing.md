@@ -1,3 +1,8 @@
+---
+layout: page
+title: Multiple Testing
+permalink: /mult_test/
+---
 <div id="dynamic-markdown-content">Loading content...</div>
 
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
