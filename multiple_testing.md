@@ -3,4 +3,4 @@ layout: page
 title: Multiple Testing
 ---
 
-{% include /mult_testing/README.html %}
+<iframe src="https://evanfrangipane.com/mult_testing/README.html" width="150%" height="500px"></iframe>
