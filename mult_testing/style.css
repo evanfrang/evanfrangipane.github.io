@@ -1,13 +1,11 @@
-/* Enable horizontal scrolling for wide figures */
-.figure {
-    overflow-x: auto;
-    white-space: nowrap;
+.page-content {
+    max-width: 90%; /* Set to 90% of the viewport width */
+    margin: 0 auto; /* Center content horizontally */
+    padding: 1rem; /* Add some padding around the content */
 }
 
-/* Ensure images scale properly */
-.figure img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+article {
+    max-width: 90%;
     margin: 0 auto;
 }
+

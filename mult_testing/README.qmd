@@ -4,11 +4,9 @@ author: "Evan Frangipane"
 format:
   html:
     code-fold: true
-    toc: true
-    toc-location: right
     html-math-method: katex
     page-layout: full
-    css: styles.css
+    css: style.css
 execute:
   cache: true
 jupyter: python3
