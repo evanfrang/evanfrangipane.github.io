@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+---
+layout: page
+title: Multiple Testing
+permalink: /mult_testing/
+---
 <html lang="en">
 <head>
   <meta charset="UTF-8">
