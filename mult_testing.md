@@ -11,7 +11,7 @@
   <div id="markdown-container">Loading content...</div>
 
   <script>
-    const url = 'https://cdn.jsdelivr.net/gh/evanfrang/mult_testing/mult_testing.md'; // The jsDelivr URL
+    const url = 'https://cdn.jsdelivr.net/gh/evanfrang/mult_testing/README.md'; // The jsDelivr URL
 
     fetch(url)
       .then(response => {
