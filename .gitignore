@@ -1,6 +1,8 @@
-_site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
 vendor
 .DS_Store
+mult_testing/.jupyter_cache/
+mult_testing/.quarto/
+mult_testing/_site/
