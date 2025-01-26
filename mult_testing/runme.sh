@@ -1,8 +1,20 @@
 #!/bin/bash
 
 # Define the Quarto input file and Python script
-QUARTO_FILE="README.qmd"  # Replace with your Quarto file
-PYTHON_SCRIPT="folder.py"  # Replace with your Python script
+QUARTO_FILE="README.qmd"  # Replace with your Quarto file path
+PYTHON_SCRIPT="folder.py"  # Replace with your Python script path
+
+# Check if Quarto file exists
+if [ ! -f "$QUARTO_FILE" ]; then
+    echo "Error: Quarto file '$QUARTO_FILE' not found!"
+    exit 1
+fi
+
+# Check if Python script exists
+if [ ! -f "$PYTHON_SCRIPT" ]; then
+    echo "Error: Python script '$PYTHON_SCRIPT' not found!"
+    exit 1
+fi
 
 # Step 1: Render the Quarto file
 echo "Rendering Quarto file: $QUARTO_FILE..."
