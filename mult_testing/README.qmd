@@ -2,10 +2,7 @@
 title: "Multiple Testing Problem in Statistics"
 author: "Evan Frangipane"
 format:
-  html:
-    code-fold: true
-    toc: true
-    toc-location: right
+  docusaurus-md:
     html-math-method: katex
 execute:
   cache: true
