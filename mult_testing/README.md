@@ -1,4 +1,3 @@
-# Multiple Testing Problem in Statistics
 Evan Frangipane
 
 ## Abstract
