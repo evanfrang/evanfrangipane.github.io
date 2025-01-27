@@ -25,9 +25,11 @@ Or click on the images I created for my research to go to the arxiv open access 
 
    [![dY](/img/resonance.jpg){: width="700" }](https://arxiv.org/pdf/2110.10711)
 
-4. de Sitter hyperboloids glued across a Coleman DeLuccia bubble wall in work soon to appear 
+4. de Sitter hyperboloids glued across a Coleman DeLuccia bubble wall in:
 
-   ![dS](/img/dS_hyperboloid.jpg){: width="400" }
+   <i> Black Holes and Bubbles: A Phenomenological, Formal, and Numerical Exploration </i>
+
+   [![dS](/img/dS_hyperboloid.jpg){: width="400" }](https://escholarship.org/uc/item/0h86q9gj)
 
 [inspire]: https://inspirehep.net/authors/1706725  
 
