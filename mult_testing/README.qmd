@@ -48,12 +48,12 @@ rcParams['font.family'] = 'serif'
 plt.rc('font', weight='bold')
 plt.rcParams['text.latex.preamble'] = r'\usepackage{sfmath} \boldmath'
 #rcParams['font.serif'] = ['Times New Roman']  
-rcParams['font.size'] = 14 
-rcParams['axes.titlesize'] = 16  
-rcParams['axes.labelsize'] = 14  
-rcParams['legend.fontsize'] = 12  
-rcParams['xtick.labelsize'] = 12  
-rcParams['ytick.labelsize'] = 12  
+rcParams['font.size'] = 18 
+rcParams['axes.titlesize'] = 20  
+rcParams['axes.labelsize'] = 18  
+rcParams['legend.fontsize'] = 16  
+rcParams['xtick.labelsize'] = 16  
+rcParams['ytick.labelsize'] = 16  
 plt.style.use('bmh')
 
 # let's setup some constants
@@ -102,7 +102,7 @@ ax.set_xscale('log')
 
 ax.legend(loc='lower right', frameon=True, shadow=True, borderpad=1)
 ax.grid(which='both', linestyle='-', linewidth=0.8, color='gray', alpha=0.7)
-#plt.title('Family-Wise Error Rate vs. Number of Tests')
+
 for spine in ax.spines.values():
     spine.set_edgecolor('black')
     spine.set_linewidth(1.5)
@@ -149,7 +149,7 @@ ax.set_xlabel('Number of Tests (N)')
 ax.set_ylabel('FWER')
 ax.set_xscale('log')
 
-ax.legend(loc='lower left', frameon=True, shadow=True, borderpad=1)
+ax.legend(loc='lower right', frameon=True, shadow=True, borderpad=1)
 ax.grid(which='both', linestyle='-', linewidth=0.8, color='gray', alpha=0.7)
 
 for spine in ax.spines.values():
