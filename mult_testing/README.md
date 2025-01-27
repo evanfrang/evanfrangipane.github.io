@@ -58,14 +58,30 @@ rcParams['xtick.labelsize'] = 12
 rcParams['ytick.labelsize'] = 12  
 plt.style.use('bmh')
 
-# If you want to see how the simulation was performed 
-# please check out the github repo
-# https://github.com/evanfrang/evanfrangipane.github.io/blob/gh-pages/mult_testing/mult_test.ipynb
+random.seed(42)
+P = 0.5
 
-with open('fwer.pkl', 'rb') as f:
-    fwer_1, fwer_2, fwer_3, M_list, fwer_b1, fwer_b2, fwer_b3, \
-    fwer_N, fwer_bound, fwer_bound_N, fwer_bound_b, Ms, \
-    pvs, index = pickle.load(f)
+def asymp(N_, n_, M_, alpha_): # asnymptotic false positive simulation
+    results = np.random.randint(0, 2, size=(n_, N_, M_))
+    evens = np.sum(results % 2 == 0, axis=2)
+    temp_binomial = binom(M_,P)
+    temp_crit = int(temp_binomial.ppf(alpha_ / 2)-1.)
+    false_positives = np.sum((evens <= temp_crit) | (evens >= M_ - temp_crit),\
+        axis=1) > 0
+    return np.mean(false_positives)
+
+# run three samples with low, med, and high M coin flip
+fwer_N = np.logspace(0,3,10)
+low_M = 18 
+fwer_low = [asymp(int(i), 10000, low_M, 0.05) for i in fwer_N]
+med_M = 51
+fwer_med = [asymp(int(i), 10000, med_M, 0.05) for i in fwer_N]
+high_M = 120
+fwer_high = [asymp(int(i), 10000, high_M, 0.05) for i in fwer_N]
+
+# analytic FWER
+fwer_bound_N = np.arange(1, 1000, 0.1) 
+fwer_bound = 1 - (1 - 0.05)**fwer_bound_N
 ```
 
 We plot the results of our analyses in
@@ -79,11 +95,11 @@ feature is the monotonic increase in Type I Error.
 ``` python
 fig, ax = plt.subplots(figsize=(10, 6))
 ax.plot(fwer_bound_N, fwer_bound, label=r'$1 - (1 - \alpha)^N$', color='navy')
-ax.plot(fwer_N, fwer_1, 'o',label=f'M={M_list[0]}', \
+ax.plot(fwer_N, fwer_low, 'o',label=f'M={low_M}', \
     color='darkred', markersize=6, alpha=0.9)
-ax.plot(fwer_N, fwer_2, '^',label=f'M={M_list[1]}', \
+ax.plot(fwer_N, fwer_med, '^',label=f'M={med_M}', \
     color='darkgreen', markersize=6, alpha=0.9)
-ax.plot(fwer_N, fwer_3, 's',label=f'M={M_list[2]}', \
+ax.plot(fwer_N, fwer_high, 's',label=f'M={high_M}', \
     color='teal', markersize=6, alpha=0.9)
 
 ax.set_xlabel('Number of Tests (N)')
@@ -125,8 +141,18 @@ critical p-value is to 0.05, the closer the FWER is to
 1 − (1 − *α*)<sup>*N*</sup>.
 
 ``` python
-colors = ['red', 'green', 'cyan']
-labels = [f'M={M_list[0]}', f'M={M_list[1]}', f'M={M_list[2]}']
+# calculate critical p-vals
+
+Ms = np.logspace(np.log(3),np.log(100),10000).astype(int)
+bins = [binom(i,P) for i in Ms]
+crits = [int(i.ppf(0.05 / 2)-1.) for i in bins]
+pvs = [2.*bins[i].cdf(min(Ms[i]-crits[i],crits[i])) for i in range(len(Ms))]
+index = [min(range(len(Ms)), key=lambda i: abs(Ms[i]-low_M)), 
+             min(range(len(Ms)), key=lambda i: abs(Ms[i]-med_M)), 
+             min(range(len(Ms)), key=lambda i: abs(Ms[i]-high_M))
+             ]
+
+labels = [f'M={low_M}', f'M={med_M}', f'M={high_M}']
 fig, ax = plt.subplots(figsize=(10, 6))
 ax.plot(Ms, pvs, color='navy', label='Critical p-Value', alpha=0.8)
 ax.axhline(0.05, color='black', label=f'$\\alpha = 0.05$')
@@ -175,15 +201,23 @@ again, where this time because *α* depends on *N*, the critical p-values
 will vary with *N* and thus the hierarchy will vary.
 
 ``` python
+# three samples with bonferroni
+fwer_b_low = [asymp(int(i), 10000, low_M, 0.05/i) for i in fwer_N]
+fwer_b_med = [asymp(int(i), 10000, med_M, 0.05/i) for i in fwer_N]
+fwer_b_high = [asymp(int(i), 10000, high_M, 0.05/i) for i in fwer_N]
+
+# fwer with adjusted alpha = alpha/N
+fwer_bound_b = 1 - (1 - 0.05/fwer_bound_N)**fwer_bound_N
+
 fig, ax = plt.subplots(figsize=(10, 6))
 
 ax.plot(fwer_bound_N, fwer_bound_b, label=r'$1 - (1 - \alpha/N)^N$', \
     color='navy', linewidth=2)
-ax.plot(fwer_N, fwer_b1, 'o', label=f'M={M_list[0]} Bonferroni', \
+ax.plot(fwer_N, fwer_b_low, 'o', label=f'M={low_M} Bonferroni', \
     color='darkred', markersize=6, alpha=0.9)
-ax.plot(fwer_N, fwer_b2, '^', label=f'M={M_list[1]} Bonferroni', \
+ax.plot(fwer_N, fwer_b_med, '^', label=f'M={med_M} Bonferroni', \
     color='darkgreen', markersize=6, alpha=0.9)
-ax.plot(fwer_N, fwer_b3, 's', label=f'M={M_list[2]} Bonferroni', \
+ax.plot(fwer_N, fwer_b_high, 's', label=f'M={high_M} Bonferroni', \
     color='teal', markersize=6, alpha=0.9)
 
 ax.set_xlabel('Number of Tests (N)')
