@@ -1,17 +1,6 @@
 # Multiple Testing
 Evan Frangipane
 
-<article>
-
-{%- if not page.meta.no_title_header %}
-<h1>
-
-{{ page.title }}
-</h1>
-
-{%- endif %} {{- page.content }}
-</article>
-
 ## Abstract
 
 In this article I will describe the multiple testing problem, simulate a
