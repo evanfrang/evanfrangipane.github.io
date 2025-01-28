@@ -1,0 +1,18 @@
+---
+layout: base
+---
+<link rel="stylesheet" href="{{ 'assets/css/styles.css' | relative_url }}">
+
+<article class="post">
+
+  {% unless page.title_in_content %}
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+  </header>
+  {% endunless %}
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+</article>

@@ -2,6 +2,7 @@
 layout: page 
 title: Physics Research 
 permalink: /physics/
+order: 5
 ---
 
 You can find my physics papers here: [INSPIRE][inspire].

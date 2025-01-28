@@ -2,6 +2,7 @@
 layout: page 
 title: Miscellaneous Work
 permalink: /misc/
+order: 6
 ---
 Here is a link to check out some code for pokemon card image fun:
 

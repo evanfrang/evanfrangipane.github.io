@@ -1,11 +1,13 @@
 ---
 title: "Multiple Testing"
+title_in_content: true
 author: "Evan Frangipane"
 format:
   commonmark
 execute:
   cache: true
 jupyter: python3
+order: 4
 ---
 
 ## Abstract
@@ -35,6 +37,7 @@ So, the total number of coins flipped in each analysis is $M \cdot N \cdot n$.
 We choose $M = 100$, and $N \in [1, 1000]$ for the following plots.
 
 ```{python}
+#| cache: true
 import numpy as np
 import matplotlib.pyplot as plt
 import random
@@ -88,6 +91,7 @@ There is a discrepancy between the analytical curve and the numerical simulation
 We will return to subtlety later in this note. For now, the relevant feature is the monotonic increase in Type I Error, the false positive probability with the number of tests.
 
 ```{python}
+#| cache: true
 #| label: fig-fwer
 #| fig-cap: "Uncorrected FWER"
 
@@ -129,6 +133,7 @@ Now, we redo the analysis with our new significance to confirm that FWER is arou
 This can be seen in @fig-fwer-bon. 
 
 ```{python}
+#| cache: true
 #| label: fig-fwer-bon
 #| fig-cap: "Bonferroni Corrected FWER"
 
@@ -175,6 +180,7 @@ Additionally, we also overlay the critical p-values for $M = \{18, 51, 100\}$.
 The closer the critical p-value is to $0.05$, the closer the FWER is to $1 - (1 - \alpha)^N$.
 
 ```{python}
+#| cache: true
 #| label: fig-crit
 #| fig-cap: "Critical p-value"
 

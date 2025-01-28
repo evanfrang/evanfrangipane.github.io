@@ -1,0 +1,84 @@
+body {
+  background: linear-gradient(to right, #f0f8ff, #ffffff); /* Soft gradient from light blue to white */
+  color: black;
+  text-align: left;
+  font-family: 'Arial', sans-serif;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-top: 100px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1); /* Subtle text shadow for better readability */
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  color: #555;
+  margin-bottom: 40px;
+  text-align: center;
+}
+  
+/* Make the image circular with a border */
+.home-img {
+  width: 300px; /* Control the size of the image */
+  height: 300px; /* Ensure the height is the same as the width to make it circular */
+  border-radius: 50%; /* This makes the image circular */
+  border: 5px solid rgb(16, 16, 16); /* Adds a white border around the image */
+  object-fit: cover; /* Ensures the image fits well inside the circle */
+  display: block; /* Centers the image */
+  margin: 0 auto; /* Centers the image horizontally */
+}
+
+/* Home Page Header */
+.home-header {
+  padding: 30px;
+  text-align: center;
+}
+
+/* Other Pages Header */
+.other-page-header {
+  padding: 30px;
+  text-align: center;
+}
+
+.cv-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  text-align: center;  /* Center text */
+  margin: 0 auto;
+}
+
+.cv-wrapper object {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.cv-wrapper p {
+  margin: 10px 0;
+}
+
+/* Targeting the navigation links in the header */
+.site-nav a {
+  font-size: 16px; /* Adjust this value as needed */
+  text-transform: uppercase; /* Optional: To make the links uppercase */
+}
+
+/* If you want to adjust the header title font size too */
+.site-header .site-title {
+  font-size: 24px; /* Adjust as needed */
+}
+
+.center-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Center-align text if needed */
+  min-height: 100vh; /* Make the page take up the full height */
+  margin: 0 auto;
+  padding: 2rem;
+}

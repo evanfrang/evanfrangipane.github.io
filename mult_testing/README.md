@@ -1,5 +1,8 @@
-# Multiple Testing
-Evan Frangipane
+---
+layout: page 
+title: Multiple Testing 
+order: 4
+---
 
 ## Abstract
 
