@@ -39,5 +39,5 @@ plugins:
 # their entries' file path in the `include:` list.
 #
 exclude:
-  - mult_testing/README.qmd
+  - mult_testing/mult_test.qmd
 
