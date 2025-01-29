@@ -117,7 +117,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-![](README_files/figure-commonmark/fig-fwer-output-1.png)
+![](mult_test_files/figure-commonmark/fig-fwer-output-1.png)
 
 ## Correcting Significance
 
@@ -166,7 +166,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-![](README_files/figure-commonmark/fig-fwer-bon-output-1.png)
+![](mult_test_files/figure-commonmark/fig-fwer-bon-output-1.png)
 
 ## Subtle Discrepancy in Numerical FWER
 
@@ -225,4 +225,4 @@ plt.tight_layout()
 plt.show()
 ```
 
-![](README_files/figure-commonmark/fig-crit-output-1.png)
+![](mult_test_files/figure-commonmark/fig-crit-output-1.png)
