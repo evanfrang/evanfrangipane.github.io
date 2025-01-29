@@ -75,10 +75,7 @@ h2 {
 .center-page {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   text-align: center; /* Center-align text if needed */
   min-height: 100vh; /* Make the page take up the full height */
   margin: 0 auto;
-  padding: 2rem;
 }
