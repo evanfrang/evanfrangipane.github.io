@@ -7,3 +7,12 @@ order: 6
 Here is a link to check out some code for pokemon card image fun:
 
 [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/evanfrang/pokemon_card_images/HEAD)
+
+The code can be found at [https://github.com/evanfrang/pokemon_card_images](https://github.com/evanfrang/pokemon_card_images). 
+
+Some pictures created with the notebook:
+
+![mag](/img/magnemite.png){: width="1000" }
+
+
+![sim](/img/sim_evos.jpg){: width="1000" }
