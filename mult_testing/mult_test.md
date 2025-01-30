@@ -226,3 +226,39 @@ plt.show()
 ```
 
 ![](mult_test_files/figure-commonmark/fig-crit-output-1.png)
+
+Despite *M* = 100 being larger than *M* = 51, the critical p-value is
+lower and not all that much larger than *M* = 18 as seen in
+<a href="#fig-crit" class="quarto-xref">Figure 3</a>. The critical
+p-value rapidly oscillates with number of coin flips (*M*) while slowly
+asymptoting to *α* = 0.05 as we would expect. So what does this mean for
+FWER?
+
+## Concluding Thoughts
+
+FWER, the false positive rate, increases with the number of statistical
+tests performed toward probability 1. We can correct for this by scaling
+our individual test *α* by the number of tests. One simple correction is
+the Bonferroni correction where *α* → *α*/*N*.
+
+This problem is simply stated and corrected but pervasive especially in
+A/B Testing. We can incorrectly make significance claims when the data
+does not support our conclusion.
+
+Additionally, I introduced a subtlety of discrete data sets having
+widely varying critical p-values. In our analysis, we noticed that our
+numerical data did not identically follow the FWER curve in
+<a href="#fig-fwer" class="quarto-xref">Figure 1</a>. Further, our data
+did not follow 0.05 in
+<a href="#fig-fwer-bon" class="quarto-xref">Figure 2</a>. The reason is
+our critical p-value being approximately 0.035 rather than 0.05 as seen
+in <a href="#fig-crit" class="quarto-xref">Figure 3</a>. This discrete
+data plus a somewhat unlucky choice of *M* = 100 leads to the difference
+between the FWER expected and our numerical result.
+
+## Addendum
+
+Thanks to
+[wikipedia](https://en.wikipedia.org/wiki/Multiple_comparisons_problem)
+(wikipedia!! 😮) for inspiring this article and thanks to Bret for
+proofreading.
