@@ -79,3 +79,54 @@ h2 {
   min-height: 100vh; /* Make the page take up the full height */
   margin: 0 auto;
 }
+
+.site-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px; /* Adjust spacing between links */
+}
+
+.site-nav .page-link {
+  text-decoration: none;
+  color: inherit;
+  font-size: 16px;
+}
+
+.nav-trigger {
+  display: none; /* Hide the checkbox */
+}
+
+.menu-icon {
+  display: none; /* Hide the toggle button on desktop */
+  cursor: pointer;
+  position: absolute; /* Position the button absolutely */
+  top: 20px; /* Adjust based on your header height */
+  right: 20px; /* Adjust based on your layout */
+  z-index: 1000; /* Ensure the button stays on top */
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block; /* Show the toggle button on mobile */
+  }
+
+  .site-nav {
+    display: none; /* Hide the menu by default on mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust based on your header height */
+    left: 0;
+    width: 100%;
+    background-color: #eaf4f5; /* Adjust background color */
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+    z-index: 999; /* Ensure the menu stays below the button */
+  }
+
+  /* Show the menu when the checkbox is checked */
+  .nav-trigger:checked ~ .site-nav {
+    display: flex;
+  }
+}
