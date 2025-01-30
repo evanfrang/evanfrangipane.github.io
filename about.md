@@ -1,12 +1,12 @@
 ---
-layout: page
-title: About
+layout: page 
+title: About 
 permalink: /about/
-order: 2
-body_class: center-page
+order: 3
 ---
-You can reach me at:
-![My email](/img/email.png){: width="250" }
-
-
-![Evan](/img/evan2.jpg){: width="250" }
+<div class="cv-wrapper">
+  <p>Take a look at my resume!</p>
+  <p>If the embedded preview does not work you can download <a href="/download/resume.pdf">here.</a></p>
+  <object data="../download/resume.pdf" width="1000" height="1000" type='application/pdf'></object>
+  
+</div>
