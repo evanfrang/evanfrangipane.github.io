@@ -88,9 +88,20 @@ h2 {
 }
 
 .site-nav .page-link {
-  text-decoration: none;
-  color: inherit;
+  text-decoration: none; /* Remove underline by default */
+  color: inherit; /* Inherit text color */
   font-size: 16px;
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect */
+.site-nav .page-link:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+
+
+.site-nav .page-link:focus {
+  outline-offset: 2px; /* Space between outline and link */
 }
 
 .nav-trigger {
@@ -98,12 +109,21 @@ h2 {
 }
 
 .menu-icon {
-  display: none; /* Hide the toggle button on desktop */
+  display: none; /* Hide by default on desktop */
   cursor: pointer;
-  position: absolute; /* Position the button absolutely */
-  top: 20px; /* Adjust based on your header height */
+  position: absolute;
+  top: 10px; /* Adjust based on your header height */
   right: 20px; /* Adjust based on your layout */
   z-index: 1000; /* Ensure the button stays on top */
+  padding: 5px; /* Add padding for better click area */
+  background-color: transparent; /* Transparent background */
+  border: none; /* Remove default button border */
+  transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
+}
+
+/* Hover effect for toggle button */
+.menu-icon:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Smaller, softer shadow */
 }
 
 /* Mobile styles */
@@ -116,12 +136,13 @@ h2 {
     display: none; /* Hide the menu by default on mobile */
     flex-direction: column;
     position: absolute;
-    top: 60px; /* Adjust based on your header height */
-    left: 0;
-    width: 100%;
-    background-color: #eaf4f5; /* Adjust background color */
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+    top: 10px; /* Adjust based on your header height */
+    left: 10px;
+    width: 80%;
+    background-color: linear-gradient(to right, #f0f8ff, #ffffff);
+    opacity: 0.95;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
     z-index: 999; /* Ensure the menu stays below the button */
   }
 
