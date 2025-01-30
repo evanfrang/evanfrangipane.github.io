@@ -40,4 +40,5 @@ plugins:
 #
 exclude:
   - mult_testing/mult_test.qmd
+  - about.md
 
