@@ -12,7 +12,8 @@ The code can be found at [https://github.com/evanfrang/pokemon_card_images](http
 
 Some pictures created with the notebook:
 
-![mag](/img/magnemite.png){: width="1000" }
+The first image is a similarity network of the 20 most similar cards to pikachu.
+![pik](/img/pikachu.png){: width="1000" }
 
-
-![sim](/img/sim_evos.jpg){: width="1000" }
+The second image is the most internally similar evolution lines.
+![sim](/img/sim_evos.png){: width="1000" }
