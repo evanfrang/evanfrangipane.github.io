@@ -50,6 +50,7 @@ h2 {
   align-items: center; /* Center horizontally */
   text-align: center;  /* Center text */
   margin: 0 auto;
+  font-size: 2rem;
 }
 
 .cv-wrapper object {
