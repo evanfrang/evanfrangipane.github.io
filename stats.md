@@ -1,12 +1,17 @@
 ---
 layout: page 
-title: Miscellaneous Work
-permalink: /misc/
-order: 6
+title: Stats and Learning Work
+permalink: /stats/
+order: 5
 ---
-Here is a link to check out some code for pokemon card image fun:
 
-[![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/evanfrang/pokemon_card_images/HEAD)
+## Model Comparison for Credit Card Fraud Classification
+
+Find the code and a write-up at [https://github.com/evanfrang/fraud_detection](https://github.com/evanfrang/fraud_detection). 
+
+![auc](/img/auc.png){: width="1000" }
+
+## Pokemon Card Image Classification with ResNet50
 
 The code can be found at [https://github.com/evanfrang/pokemon_card_images](https://github.com/evanfrang/pokemon_card_images). 
 

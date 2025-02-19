@@ -2,35 +2,54 @@
 layout: page 
 title: Physics Research 
 permalink: /physics/
-order: 5
+order: 6
 ---
 
 You can find my physics papers here: [INSPIRE][inspire].
 Or click on the images I created for my research to go to the arxiv open access versions.
 
-1. Primordial Black Hole fraction of dark matter estimated for our novel analysis outlined in: 
+## Primordial Black Holes
+PBH fraction of dark matter estimated for our novel analysis outlined in: 
 
-   <i> Revealing terrestrial-mass primordial black holes with the Nancy Grace Roman Space Telescope </i>
+<i> Revealing terrestrial-mass primordial black holes with the Nancy Grace Roman Space Telescope </i>
 
-   [![FFP](/img/fdm_bounds_money.jpg){: width="550" }](https://arxiv.org/pdf/2311.00751)
+<div style="text-align: center;">
+  <a href="https://arxiv.org/pdf/2311.00751">
+    <img src="/img/fdm_bounds_money.jpg" alt="FFP">
+  </a>
+</div>
 
-2. Schematic evaporating Black Hole spacetime discussed in: 
+## Evaporating Black Hole spacetime 
 
-   <i> Unitarity and the information problem in an explicit model of black hole evaporation </i>
+<i> Unitarity and the information problem in an explicit model of black hole evaporation </i>
 
-   [![BH](/img/002.jpg){: width="400" }](https://arxiv.org/pdf/2012.07973)
+<div style="text-align: center;">
+  <a href="https://arxiv.org/pdf/2012.07973">
+    <img src="/img/002.jpg" alt="BH" width="500">
+  </a>
+</div>
 
-3. Differential yield for b<SPAN STYLE="text-decoration:overline">b</SPAN> -> X<SPAN STYLE="text-decoration:overline">X</SPAN> via scalars in: 
+## Particle Effective Field Theory 
+Differential yield for b<SPAN STYLE="text-decoration:overline">b</SPAN> -> X<SPAN STYLE="text-decoration:overline">X</SPAN> via scalars in: 
 
-   <i> Dark matter freeze-in with a heavy mediator: beyond the EFT approach </i>
+<i> Dark matter freeze-in with a heavy mediator: beyond the EFT approach </i>
 
-   [![dY](/img/resonance.jpg){: width="700" }](https://arxiv.org/pdf/2110.10711)
+<div style="text-align: center;">
+  <a href="https://arxiv.org/pdf/2110.10711">
+    <img src="/img/resonance.jpg" alt="dY" width="700">
+  </a>
+</div>
 
-4. de Sitter hyperboloids glued across a Coleman DeLuccia bubble wall in:
+## Bubble Collisions in de Sitter
+de Sitter hyperboloids glued across a Coleman DeLuccia bubble wall in:
 
-   <i> Black Holes and Bubbles: A Phenomenological, Formal, and Numerical Exploration </i>
+<i> Black Holes and Bubbles: A Phenomenological, Formal, and Numerical Exploration </i>
 
-   [![dS](/img/dS_hyperboloid.jpg){: width="400" }](https://escholarship.org/uc/item/0h86q9gj)
+<div style="text-align: center;">
+  <a href="https://escholarship.org/uc/item/0h86q9gj">
+    <img src="/img/dS_hyperboloid.jpg" alt="dS" width="500">
+  </a>
+</div>
 
 [inspire]: https://inspirehep.net/authors/1706725  
 
