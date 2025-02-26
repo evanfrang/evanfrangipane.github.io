@@ -14,7 +14,7 @@ Find the code and a write-up at [https://github.com/evanfrang/fraud_detection](h
 ## Happiness Trends Worldwide: A Comparative View 2015 - 2024
 
 Tableau dashboard for happiness changes from 2015 to 2024 from the World Happiness Report.
-The dashboard can be found [https://public.tableau.com/app/profile/evan.frangipane/viz/whs_2015_2024/Dashboard1](here).
+The dashboard can be found [here](https://public.tableau.com/app/profile/evan.frangipane/viz/whs_2015_2024/Dashboard1).
 
 ![whr](/img/WHR_map.JPG){: width="1000" }
 
