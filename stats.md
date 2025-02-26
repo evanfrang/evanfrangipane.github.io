@@ -16,7 +16,7 @@ Find the code and a write-up at [https://github.com/evanfrang/fraud_detection](h
 Tableau dashboard for happiness changes from 2015 to 2024 from the World Happiness Report.
 The dashboard can be found [https://public.tableau.com/app/profile/evan.frangipane/viz/whs_2015_2024/Dashboard1](here).
 
-![pik](/img/WHR_map.jpg){: width="1000" }
+![whr](/img/WHR_map.JPG){: width="1000" }
 
 This map shows the percent change of happiness from before 2020 to 2020 and beyond.
 The global change was a 2.7% increase in happiness.
