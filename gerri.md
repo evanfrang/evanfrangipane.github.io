@@ -10,3 +10,5 @@ body_class: center-page
 You have found the easter egg.
 
 ![Gerri](/img/gerri.jpg){: width="250" }
+
+This is a test change
