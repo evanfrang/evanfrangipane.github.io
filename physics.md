@@ -6,7 +6,8 @@ order: 6
 ---
 
 You can find my physics papers here: [INSPIRE][inspire].
-Or click on the images I created for my research to go to the arxiv open access versions.
+
+Or click on the images to go to the arxiv open access versions.
 
 ## Primordial Black Holes
 PBH fraction of dark matter estimated for our novel analysis outlined in: 
