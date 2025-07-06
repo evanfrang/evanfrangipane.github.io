@@ -5,6 +5,15 @@ permalink: /proj/
 order: 5
 ---
 
+## End-to-End arXiv Abstract Classification
+
+[Live model for classifiying abstracts!](https://arxiv-classifier.onrender.com/)
+
+Find the code and a write-up at [https://github.com/evanfrang/arxiv_classifier](https://github.com/evanfrang/arxiv_classifier). 
+
+Here is the confusion matrix for the live Logistic Regression model.
+![cm](/img/confusion.png){: width="1000" }
+
 ## Model Comparison for Credit Card Fraud Classification
 
 Find the code and a write-up at [https://github.com/evanfrang/fraud_detection](https://github.com/evanfrang/fraud_detection). 
