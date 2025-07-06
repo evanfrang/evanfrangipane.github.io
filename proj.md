@@ -12,7 +12,8 @@ order: 5
 Find the code and a write-up at [https://github.com/evanfrang/arxiv_classifier](https://github.com/evanfrang/arxiv_classifier). 
 
 Here is the confusion matrix for the live Logistic Regression model.
-![cm](/img/confusion.png){: width="1000" }
+
+![cm](/img/lrconfusion.png){: width="1000" }
 
 ## Model Comparison for Credit Card Fraud Classification
 
