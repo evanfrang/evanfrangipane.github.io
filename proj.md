@@ -2,7 +2,7 @@
 layout: page 
 title: Portfolio
 permalink: /proj/
-order: 5
+order: 1
 ---
 
 ## End-to-End arXiv Abstract Classification

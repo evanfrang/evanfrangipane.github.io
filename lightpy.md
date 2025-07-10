@@ -2,7 +2,7 @@
 layout: page
 title: LightPy
 permalink: /lightpy/
-order: 8
+order: 4
 ---
 
 I have been playing around with simulating light and optics and created this python project 
