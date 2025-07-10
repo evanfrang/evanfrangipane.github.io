@@ -2,6 +2,7 @@
 layout: page 
 title: About 
 permalink: /about/
+nav_exclude: true
 order: 3
 ---
 <div class="cv-wrapper">
