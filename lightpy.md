@@ -3,8 +3,6 @@ layout: page
 title: LightPy
 permalink: /lightpy/
 order: 8
-nav_exclude: true
-body_class: center-page
 ---
 
 I have been playing around with simulating light and optics and created this python project 
