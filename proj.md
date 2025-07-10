@@ -1,6 +1,6 @@
 ---
 layout: page 
-title: Technical Portfolio
+title: Portfolio
 permalink: /proj/
 order: 5
 ---

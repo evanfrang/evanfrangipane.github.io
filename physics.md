@@ -1,6 +1,6 @@
 ---
 layout: page 
-title: Physics Research 
+title: Physics
 permalink: /physics/
 order: 6
 ---
