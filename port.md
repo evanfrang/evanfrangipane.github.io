@@ -28,10 +28,9 @@ The code can be found at [https://github.com/evanfrang/weather_bayes/](https://g
 
 On the left we have Gaussian Process and on the right we have Prophet forecasting temperatures.
 
-<p float="left">
-  <img src="/img/gp.png" width="400" />
+<div style="display: flex; gap: 20px;"> <img src="/img/gp.png" width="400" />
   <img src="/img/prophet.png" width="400" /> 
-</p>
+</div>
 
 
 ## Model Comparison for Credit Card Fraud Classification
