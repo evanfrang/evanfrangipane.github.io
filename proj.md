@@ -5,6 +5,11 @@ permalink: /proj/
 order: 2
 ---
 
+## arxbot: LLM trained on Physics Abstracts
+
+Small chatbot using physics abstracts as context via RAG pipeline.
+Take a look at the code at [https://github.com/evanfrang/arxbot](https://github.com/evanfrang/arxbot).
+
 ## End-to-End arXiv Abstract Classification
 
 [Live model for classifiying abstracts!](https://arxiv-classifier.onrender.com/)
