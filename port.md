@@ -1,7 +1,7 @@
 ---
 layout: page 
 title: Portfolio
-permalink: /proj/
+permalink: /port/
 order: 2
 ---
 
@@ -19,6 +19,20 @@ Find the code and a write-up at [https://github.com/evanfrang/arxiv_classifier](
 Here is the confusion matrix for the live Logistic Regression model.
 
 ![cm](/img/lrconfusion.png){: width="1000" }
+
+
+## Weather Forecasting with ML
+
+I used Gaussian Processes and Prophet to do time series forecsting on daily temperatures.
+The code can be found at [https://github.com/evanfrang/weather_bayes/](https://github.com/evanfrang/weather_bayes/).
+
+On the left we have Gaussian Process and on the right we have Prophet forecasting temperatures.
+
+<p float="left">
+  <img src="/img/gp.png" width="400" />
+  <img src="/img/prophet.png" width="400" /> 
+</p>
+
 
 ## Model Comparison for Credit Card Fraud Classification
 
