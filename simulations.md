@@ -1,9 +1,11 @@
 ---
 layout: page
-title: LightPy
-permalink: /lightpy/
+title: Simulations
+permalink: /sims/
 order: 4
 ---
+
+## LightPy
 
 I have been playing around with simulating light and optics and created this python project 
 which utilizes the Angular Spectrum Method (ASM).
@@ -16,4 +18,18 @@ Here is the result for the circular aperture experiment:
 ![circ](/img/circular_aperture.png){: width="1000" }
 
 ![circ2d](/img/circular_aperture_2d.png){: width="1000" }
+
+## ngrav
+
+Another physics simulation this time with gravity.
+Trying out writing an object oriented simulation this time.
+
+The codebase can be found at [ngrav](https://github.com/evanfrang/ngrav).
+
+Here is a video of a ring system devolving into chaos.
+<video width="640" height="480" controls>
+  <source src="img/ring_ani.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 
