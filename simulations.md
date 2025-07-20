@@ -27,9 +27,6 @@ Trying out writing an object oriented simulation this time.
 The codebase can be found at [ngrav](https://github.com/evanfrang/ngrav).
 
 Here is a video of a ring system devolving into chaos.
-<video width="640" height="480" controls>
-  <source src="img/ring_ani.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[Watch Video](img/ring_ani.mp4)
 
 
