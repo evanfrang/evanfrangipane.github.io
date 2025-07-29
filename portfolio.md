@@ -5,6 +5,11 @@ permalink: /portfolio/
 order: 2
 ---
 
+## GenAI for Creating Abstracts
+
+Fine-tuned tiny llama on title, category, and abstract data to generate novel abstracts.
+Take a look at the code at [https://github.com/evanfrang/abstract_generator](https://github.com/evanfrang/abstract_generator).
+
 ## arxbot: LLM trained on Physics Abstracts
 
 Small chatbot using physics abstracts as context via RAG pipeline.
@@ -49,15 +54,3 @@ This map shows the percent change of happiness from before 2020 to 2020 and beyo
 The global change was a 2.7% increase in happiness.
 
 The datasets can be found on my [github](https://github.com/evanfrang/world_happiness).
-
-## Pokemon Card Image Classification with ResNet50
-
-The code can be found at [https://github.com/evanfrang/pokemon_card_images](https://github.com/evanfrang/pokemon_card_images). 
-
-Some pictures created with the notebook:
-
-The first image is a similarity network of the 20 most similar cards to pikachu.
-![pik](/img/pikachu.png){: width="1000" }
-
-The second image is the most internally similar evolution lines.
-![sim](/img/sim_evos.png){: width="1000" }
