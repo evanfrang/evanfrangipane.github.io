@@ -26,6 +26,10 @@ Trying out writing an object oriented simulation this time.
 
 The codebase can be found at [ngrav](https://github.com/evanfrang/ngrav).
 
+Here is an example orbit:
+![ring](/img/ring.png){: width="1000" }
+
+
 Here is a video of a ring system devolving into chaos.
 [Watch Video](img/ring_ani.mp4)
 
